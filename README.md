@@ -3,7 +3,7 @@
 Machine Learning Internship - Cognifyz Technologies
 Duration: February
 
-This repository contains the Machine Learning tasks and projects completed during my internship at Cognifice Technologies. The projects primarily focus on applying data preprocessing, recommendation systems, regression, and classification techniques to a real-world restaurant dataset.
+This repository contains the Machine Learning tasks and projects completed during my internship at Cognifyz Technologies. The projects primarily focus on applying data preprocessing, recommendation systems, regression, and classification techniques to a real-world restaurant dataset.
 
 📂 Project Structure
 Dataset.csv: The primary restaurant dataset used across all tasks.
