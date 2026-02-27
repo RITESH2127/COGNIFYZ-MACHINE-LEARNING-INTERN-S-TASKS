@@ -1,70 +1,52 @@
+# Machine Learning Internship Tasks - Cognifyz Technologies
 
+This repository contains the machine learning projects and tasks completed during my internship at **Cognifyz Technologies** in the month of February. The tasks primarily focus on data preprocessing, building recommendation systems, regression, and classification models using Python and Scikit-Learn.
 
-Machine Learning Internship - Cognifyz Technologies
-Duration: February
+## 📊 Dataset Overview
+The tasks are based on a restaurant dataset (`Dataset.csv`) that includes various attributes such as:
+* **Restaurant Details:** Name, ID, Country Code, City, Address, Locality.
+* **Services:** Table booking, Online delivery, Order menu switch.
+* **Metrics & Features:** Average Cost for two, Price range, Aggregate rating, Votes, Cuisines.
+* **Location Data:** Longitude, Latitude.
 
-This repository contains the Machine Learning tasks and projects completed during my internship at Cognifyz Technologies. The projects primarily focus on applying data preprocessing, recommendation systems, regression, and classification techniques to a real-world restaurant dataset.
+## 🚀 Tasks Breakdown
 
-📂 Project Structure
-Dataset.csv: The primary restaurant dataset used across all tasks.
+### Task 2: Restaurant Recommendation System (`ML_TASK2.py`)
+A content-based recommendation system that suggests restaurants to users based on their cuisine and price preferences.
+* **Approach:** Encodes categorical features (Cuisines, Price range) and computes the **Cosine Similarity** between user preferences and the restaurant dataset.
+* **Output:** Returns the top 5 most similar restaurants based on the user's input.
+* **Result Snapshot:** ![Task 2 Output](M2.png)
 
-ML_TASK2.py: A Content-Based Restaurant Recommendation System.
+### Task 3: Rating Prediction Regression Model (`ML_TASK3.py`)
+A machine learning regression model designed to predict a restaurant's `Aggregate rating`.
+* **Approach:** * Selected key features: Location (Longitude/Latitude), Cost, Booking/Delivery options, Price range, and Votes.
+    * Applied `LabelEncoder` to categorical variables.
+    * Trained a **Random Forest Regressor** (`n_estimators=100`).
+* **Evaluation:** The model is evaluated using Mean Squared Error (MSE) and R-squared ($R^2$) metrics.
+* **Result Snapshot:** ![Task 3 Output](M3.png)
 
-ML_TASK3.py: A Regression model to predict restaurant ratings.
+### Task 4: Primary Cuisine Classification Model (`ML_TASK4.py`)
+A classification model built to predict the primary cuisine a restaurant serves based on its features.
+* **Approach:**
+    * Extracted the "Primary Cuisine" (first cuisine listed) from the `Cuisines` column.
+    * Filtered the dataset to focus on the top 10 most popular primary cuisines to ensure balanced classes.
+    * Trained a **Random Forest Classifier** using balanced class weights.
+* **Evaluation:** Assessed using standard classification metrics (Accuracy Score and Classification Report).
+* **Result Snapshot:** ![Task 4 Output](M4.png)
 
-ML_TASK4.py: A Classification model to predict a restaurant's primary cuisine.
+## 🛠️ Technologies & Libraries Used
+* **Language:** Python
+* **Data Manipulation:** Pandas, NumPy
+* **Machine Learning:** Scikit-Learn (`RandomForestRegressor`, `RandomForestClassifier`, `LabelEncoder`, `train_test_split`, `cosine_similarity`)
 
-M2.png, M3.png, M4.png: Output screenshots and visual results for Tasks 2, 3, and 4 respectively.
+## ⚙️ How to Run the Projects
 
-🚀 Tasks Overview
-Task 2: Restaurant Recommendation System (ML_TASK2.py)
-Built a recommendation engine that suggests restaurants based on user preferences for Cuisine and Price Range.
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repository-url>
+   cd <your-repository-folder>
+pip install -r requirements.txt
 
-Technique Used: Content-Based Filtering using Cosine Similarity.
-
-Workflow: The model encodes categorical features (Cuisines, Price range) using LabelEncoder and computes the similarity scores to return the top 5 closest restaurant matches for the user's input.
-
-Task 3: Rating Prediction Model (ML_TASK3.py)
-Developed a machine learning model to predict the Aggregate Rating of a restaurant based on various features like location, cost, and availability of online booking/delivery.
-
-Algorithm Used: RandomForestRegressor
-
-Features Used: Longitude, Latitude, Average Cost for two, Has Table booking, Has Online delivery, Price range, Votes, etc.
-
-Evaluation Metrics: Mean Squared Error (MSE) and R-squared (R 
-2
- ) Score.
-
-Task 4: Cuisine Classification Model (ML_TASK4.py)
-Created a classification model to predict the Primary Cuisine of a restaurant based on its attributes.
-
-Algorithm Used: RandomForestClassifier (with balanced class weights).
-
-Workflow: Extracted the primary cuisine from a comma-separated list, filtered the dataset to only include the Top 10 most popular cuisines, and trained the classifier on geographical and operational features.
-
-Evaluation Metrics: Accuracy Score and Classification Report (Precision, Recall, F1-Score).
-
-🛠️ Technologies & Libraries Used
-Python 3.x
-
-Pandas: Data manipulation and cleaning.
-
-NumPy: Numerical operations.
-
-Scikit-Learn: Machine learning algorithms (RandomForestRegressor, RandomForestClassifier), preprocessing (LabelEncoder), and evaluation metrics.
-
-⚙️ How to Run
-Clone this repository to your local machine:
-
-Bash
-git clone <your-repository-url>
-Ensure you have the required libraries installed:
-
-Bash
-pip install pandas numpy scikit-learn
-Run the Python scripts individually from your terminal:
-
-Bash
 python ML_TASK2.py
 python ML_TASK3.py
 python ML_TASK4.py
