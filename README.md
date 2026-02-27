@@ -1,5 +1,4 @@
-Gemini said
-Here is a README.md file tailored for your GitHub repository. It clearly outlines the tasks you completed during your internship at Cognifice Technologies, describes the machine learning models you built, and links the screenshots you provided.
+
 
 Machine Learning Internship - Cognifice Technologies
 Duration: February
